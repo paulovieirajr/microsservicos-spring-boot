@@ -1,4 +1,4 @@
-package io.github.paulovieirajr.msclientes.usecases;
+package io.github.paulovieirajr.msclientes.core.usecases;
 
 public interface ClientUseCaseHandler <T, R> {
 

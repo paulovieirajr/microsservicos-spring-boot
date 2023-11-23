@@ -1,4 +1,4 @@
-package io.github.paulovieirajr.msclientes.usecases;
+package io.github.paulovieirajr.msclientes.core.usecases;
 
 import io.github.paulovieirajr.msclientes.api.dto.ClientRequest;
 import io.github.paulovieirajr.msclientes.api.dto.ClientResponse;
