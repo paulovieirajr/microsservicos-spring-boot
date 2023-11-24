@@ -1,7 +1,7 @@
 package io.github.paulovieirajr.msclientes.infra.config;
 
 import io.github.paulovieirajr.msclientes.infra.repository.ClientRepository;
-import io.github.paulovieirajr.msclientes.core.usecases.ClientRegisterUseCase;
+import io.github.paulovieirajr.msclientes.core.application.usecases.ClientRegisterUseCase;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
