@@ -1,4 +1,4 @@
-package io.github.paulovieirajr.msclientes.core.exception;
+package io.github.paulovieirajr.msclientes.core.application.exception;
 
 import java.io.Serial;
 

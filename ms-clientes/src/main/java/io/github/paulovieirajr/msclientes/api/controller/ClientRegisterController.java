@@ -2,7 +2,7 @@ package io.github.paulovieirajr.msclientes.api.controller;
 
 import io.github.paulovieirajr.msclientes.api.dto.ClientRequest;
 import io.github.paulovieirajr.msclientes.api.dto.ClientResponse;
-import io.github.paulovieirajr.msclientes.core.usecases.ClientRegisterUseCase;
+import io.github.paulovieirajr.msclientes.core.application.usecases.ClientRegisterUseCase;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

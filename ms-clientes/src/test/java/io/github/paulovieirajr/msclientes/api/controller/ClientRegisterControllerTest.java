@@ -2,7 +2,7 @@ package io.github.paulovieirajr.msclientes.api.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.github.paulovieirajr.msclientes.api.dto.ClientRequest;
-import io.github.paulovieirajr.msclientes.core.usecases.ClientRegisterUseCase;
+import io.github.paulovieirajr.msclientes.core.application.usecases.ClientRegisterUseCase;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
