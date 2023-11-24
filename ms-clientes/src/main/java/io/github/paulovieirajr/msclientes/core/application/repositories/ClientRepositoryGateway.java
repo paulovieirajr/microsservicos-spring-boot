@@ -1,12 +1,13 @@
 package io.github.paulovieirajr.msclientes.core.application.repositories;
 
 import io.github.paulovieirajr.msclientes.core.domain.Client;
+import io.github.paulovieirajr.msclientes.infra.model.ClientModel;
 
 import java.util.Optional;
 
 public interface ClientRepositoryGateway {
 
-    Client save(Client client);
+    ClientModel save(Client client);
 
-    Optional<Client> findByCpf(String cpf);
+    Optional<ClientModel> findByCpf(String cpf);
 }

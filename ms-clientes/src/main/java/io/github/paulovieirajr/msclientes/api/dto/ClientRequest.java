@@ -1,7 +1,6 @@
 package io.github.paulovieirajr.msclientes.api.dto;
 
 import io.github.paulovieirajr.msclientes.core.domain.Client;
-import io.github.paulovieirajr.msclientes.infra.model.ClientModel;
 import org.hibernate.validator.constraints.br.CPF;
 
 import javax.validation.constraints.NotBlank;
@@ -22,8 +21,7 @@ public record ClientRequest(
         Integer age
 ) {
 
-    public ClientModel toModel() {
-        Client client = new Client(name, cpf, age);
-        return new ClientModel(client.getName(), client.getCpf(), client.getAge());
+    public Client toEntity() {
+        return new Client(name, cpf, age);
     }
 }
