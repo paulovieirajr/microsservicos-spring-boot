@@ -1,7 +1,7 @@
 package io.github.paulovieirajr.msclientes.infra.gateways;
 
 import io.github.paulovieirajr.msclientes.core.application.repositories.ClientRepositoryGateway;
-import io.github.paulovieirajr.msclientes.core.domain.Client;
+import io.github.paulovieirajr.msclientes.core.domain.entities.Client;
 import io.github.paulovieirajr.msclientes.infra.mapper.ClientMapper;
 import io.github.paulovieirajr.msclientes.infra.model.ClientModel;
 import io.github.paulovieirajr.msclientes.infra.repository.ClientRepository;

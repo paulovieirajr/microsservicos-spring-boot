@@ -1,6 +1,6 @@
 package io.github.paulovieirajr.msclientes.api.dto;
 
-import io.github.paulovieirajr.msclientes.core.domain.Client;
+import io.github.paulovieirajr.msclientes.core.domain.entities.Client;
 import org.hibernate.validator.constraints.br.CPF;
 
 import javax.validation.constraints.NotBlank;

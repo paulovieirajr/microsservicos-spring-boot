@@ -1,6 +1,7 @@
 package io.github.paulovieirajr.msclientes.core.domain;
 
-import io.github.paulovieirajr.msclientes.core.application.exception.ClientException;
+import io.github.paulovieirajr.msclientes.core.domain.entities.Client;
+import io.github.paulovieirajr.msclientes.core.domain.exception.ClientException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

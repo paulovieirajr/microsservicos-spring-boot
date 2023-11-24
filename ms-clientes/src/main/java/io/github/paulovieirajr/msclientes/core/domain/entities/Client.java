@@ -1,6 +1,6 @@
-package io.github.paulovieirajr.msclientes.core.domain;
+package io.github.paulovieirajr.msclientes.core.domain.entities;
 
-import io.github.paulovieirajr.msclientes.core.application.exception.ClientException;
+import io.github.paulovieirajr.msclientes.core.domain.exception.ClientException;
 
 public class Client {
 
