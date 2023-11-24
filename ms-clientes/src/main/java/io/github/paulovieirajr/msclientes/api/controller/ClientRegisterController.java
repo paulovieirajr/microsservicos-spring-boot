@@ -19,14 +19,14 @@ import static io.github.paulovieirajr.msclientes.api.constants.ClientControllerC
 @RequestMapping(API_VERSION + CLIENTS)
 public class ClientRegisterController {
 
-    private final ClientRegisterUseCase clientRegisterUseCase;
+    private final ClientRegisterUseCase clientClientRegisterUseCaseHandler;
 
-    public ClientRegisterController(ClientRegisterUseCase clientRegisterUseCase) {
-        this.clientRegisterUseCase = clientRegisterUseCase;
+    public ClientRegisterController(ClientRegisterUseCase clientClientRegisterUseCase) {
+        this.clientClientRegisterUseCaseHandler = clientClientRegisterUseCase;
     }
 
     @PostMapping
     public ResponseEntity<ClientResponse> execute(@Valid @RequestBody ClientRequest request) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(clientRegisterUseCase.execute(request));
+        return ResponseEntity.status(HttpStatus.CREATED).body(clientClientRegisterUseCaseHandler.execute(request));
     }
 }
