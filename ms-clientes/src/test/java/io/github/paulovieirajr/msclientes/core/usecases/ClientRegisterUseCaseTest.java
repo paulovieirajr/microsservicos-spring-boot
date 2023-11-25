@@ -3,11 +3,9 @@ package io.github.paulovieirajr.msclientes.core.usecases;
 
 import io.github.paulovieirajr.msclientes.api.dto.ClientRequest;
 import io.github.paulovieirajr.msclientes.api.dto.ClientResponse;
-import io.github.paulovieirajr.msclientes.api.exception.BusinessException;
 import io.github.paulovieirajr.msclientes.core.application.repositories.ClientRepositoryGateway;
 import io.github.paulovieirajr.msclientes.core.application.usecases.ClientRegisterUseCaseHandler;
 import io.github.paulovieirajr.msclientes.core.domain.entities.Client;
-import io.github.paulovieirajr.msclientes.core.domain.exception.ClientException;
 import io.github.paulovieirajr.msclientes.infra.model.ClientModel;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -61,8 +59,8 @@ class ClientRegisterUseCaseTest {
     @Test
     public void failedClientRegistration() {
         ClientRequest clientRequest = new ClientRequest(CLIENT_NAME, INVALID_CPF, CLIENT_AGE);
-        when(clientRepositoryGateway.save(any(Client.class))).thenThrow(new ClientException("CPF Inválido"));
+        when(clientRepositoryGateway.save(any(Client.class))).thenThrow(new IllegalArgumentException("CPF Inválido"));
 
-        assertThrows(ClientException.class, () -> clientRegisterUseCaseHandler.execute(clientRequest));
+        assertThrows(IllegalArgumentException.class, () -> clientRegisterUseCaseHandler.execute(clientRequest));
     }
 }
