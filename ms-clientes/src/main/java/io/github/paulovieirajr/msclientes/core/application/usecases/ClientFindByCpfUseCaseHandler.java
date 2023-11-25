@@ -6,7 +6,7 @@ import io.github.paulovieirajr.msclientes.core.application.repositories.ClientRe
 import io.github.paulovieirajr.msclientes.core.domain.util.CpfValidator;
 import io.github.paulovieirajr.msclientes.infra.model.ClientModel;
 
-import javax.persistence.EntityNotFoundException;
+import jakarta.persistence.EntityNotFoundException;
 import java.util.Optional;
 
 public class ClientFindByCpfUseCaseHandler implements ClientFindByCpfUseCase {

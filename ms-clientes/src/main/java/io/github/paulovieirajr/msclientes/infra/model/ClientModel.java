@@ -1,6 +1,6 @@
 package io.github.paulovieirajr.msclientes.infra.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.io.Serial;
 import java.io.Serializable;
 

@@ -3,9 +3,9 @@ package io.github.paulovieirajr.msclientes.api.dto;
 import io.github.paulovieirajr.msclientes.core.domain.entities.Client;
 import org.hibernate.validator.constraints.br.CPF;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
 public record ClientRequest(
 
