@@ -11,13 +11,13 @@ public class Client {
 
     public Client(String name, String cpf, Integer age) {
         if (!isNameValid(name)) {
-            throw new ClientException("Nome é obrigatório");
+            throw new IllegalArgumentException("Nome é obrigatório");
         }
         if (!isCpfValid(cpf)) {
-            throw new ClientException("CPF inválido");
+            throw new IllegalArgumentException("CPF inválido");
         }
         if (!isAgeValid(age)) {
-            throw new ClientException("Idade é obrigatória");
+            throw new IllegalArgumentException("Idade é obrigatória");
         }
         this.name = name;
         this.cpf = cpf;

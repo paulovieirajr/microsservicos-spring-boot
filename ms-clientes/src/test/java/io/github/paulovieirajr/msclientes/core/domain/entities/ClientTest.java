@@ -1,7 +1,5 @@
-package io.github.paulovieirajr.msclientes.core.domain;
+package io.github.paulovieirajr.msclientes.core.domain.entities;
 
-import io.github.paulovieirajr.msclientes.core.domain.entities.Client;
-import io.github.paulovieirajr.msclientes.core.domain.exception.ClientException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -32,25 +30,25 @@ class ClientTest {
         @DisplayName("Should throw exception when name is blank")
         @Test
         void createClientWithBlankName() {
-            assertThrows(ClientException.class, () -> new Client("", "56010962013", 25));
+            assertThrows(IllegalArgumentException.class, () -> new Client("", "56010962013", 25));
         }
 
         @DisplayName("Should throw exception when CPF is invalid")
         @Test
         void createClientWithInvalidCPF() {
-            assertThrows(ClientException.class, () -> new Client("John Doe", "123", 25));
+            assertThrows(IllegalArgumentException.class, () -> new Client("John Doe", "123", 25));
         }
 
         @DisplayName("Should throw exception when age is null")
         @Test
         void createClientWithNullAge() {
-            assertThrows(ClientException.class, () -> new Client("John Doe", "56010962013", null));
+            assertThrows(IllegalArgumentException.class, () -> new Client("John Doe", "56010962013", null));
         }
 
         @DisplayName("Should throw exception when age is not positive")
         @Test
         void createClientWithNonPositiveAge() {
-            assertThrows(ClientException.class, () -> new Client("John Doe", "56010962013", 0));
+            assertThrows(IllegalArgumentException.class, () -> new Client("John Doe", "56010962013", 0));
         }
     }
 }
