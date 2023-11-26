@@ -25,10 +25,10 @@ public class CreditCardFindController {
         this.creditCardFindByIncomeUseCase = creditCardFindByIncomeUseCase;
     }
 
-    @GetMapping("/income")
-    public ResponseEntity<Collection<CreditCardResponse>> findByIncome(@RequestParam Long value) {
-        log.info("Endpoint called: GET /credit-cards/{}", value);
-        var response = creditCardFindByIncomeUseCase.execute(value);
+    @GetMapping
+    public ResponseEntity<Collection<CreditCardResponse>> findByIncome(@RequestParam Long income) {
+        log.info("Endpoint called: GET /credit-cards/{}", income);
+        var response = creditCardFindByIncomeUseCase.execute(income);
         return ResponseEntity.ok(response);
     }
 }
