@@ -14,6 +14,10 @@ spring:
           uri: lb://ms-clientes
           predicates:
             - Path=/api/v1/clients/**
+        - id: ms-cartoes
+          uri: lb://ms-cartoes
+          predicates:
+            - Path=/api/v1/credit-cards/**
 
 server:
   port: 8080
