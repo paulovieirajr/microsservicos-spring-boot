@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: @project.artifactId@
+
+  # H2 DATABASE
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+    console.settings.trace: false
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    show-sql: true
+    defer-datasource-initialization: true
+    database-platform: org.hibernate.dialect.H2Dialect
+
+server:
+  port: 0
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    preferIpAddress: false
+    hostname: localhost
+    ipAddr: 127.0.0.1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
