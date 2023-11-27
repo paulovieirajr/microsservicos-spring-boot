@@ -2,6 +2,7 @@ package io.github.paulovieirajr.mscartoes.api.dto;
 
 import io.github.paulovieirajr.mscartoes.core.domain.CardNetwork;
 import io.github.paulovieirajr.mscartoes.core.domain.CreditCard;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
@@ -14,6 +15,7 @@ public record CreditCardRequest(
         @NotNull(message = "A bandeira do cartão não pode ser vazia")
         CardNetwork cardNetwork,
         @Positive(message = "A renda mínima para a criação não pode ser menor que zero")
+        @Min(value = 1500, message = "A renda mínima para a criação de um cartão é de R$ 1.500,00")
         BigDecimal income,
         @Positive(message = "O limite do cartão não pode ser menor que zero")
         BigDecimal limit
