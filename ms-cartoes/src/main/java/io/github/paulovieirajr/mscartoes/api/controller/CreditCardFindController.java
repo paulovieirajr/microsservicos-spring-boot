@@ -1,6 +1,7 @@
 package io.github.paulovieirajr.mscartoes.api.controller;
 
 import io.github.paulovieirajr.mscartoes.api.dto.CreditCardResponse;
+import io.github.paulovieirajr.mscartoes.api.exception.BusinessException;
 import io.github.paulovieirajr.mscartoes.core.application.usecases.CreditCardFindByIncomeUseCase;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +29,8 @@ public class CreditCardFindController {
     @GetMapping
     public ResponseEntity<Collection<CreditCardResponse>> findByIncome(@RequestParam Long income) {
         log.info("Endpoint called: GET /credit-cards/{}", income);
+        if (income <= 0)
+            throw new BusinessException("A renda informada é inválida. Devem ser informado um valor positivo.");
         var response = creditCardFindByIncomeUseCase.execute(income);
         return ResponseEntity.ok(response);
     }
