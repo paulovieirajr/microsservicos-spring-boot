@@ -27,6 +27,7 @@ public class CreditCardRegisterController {
 
     @PostMapping
     public ResponseEntity<?> registerCard(@RequestBody @Valid CreditCardRequest request) {
+        log.info("Endpoint called: POST /credit-cards");
         var response = creditCardRegisterUseCase.execute(request);
         log.info("Credit card registered: {}", response);
         return ResponseEntity.status(HttpStatus.CREATED).build();
