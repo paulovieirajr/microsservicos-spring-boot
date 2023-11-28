@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import com.fasterxml.jackson.databind.exc.PropertyBindingException;
 import io.github.paulovieirajr.mscartoes.core.domain.exception.CreditCardException;
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.validation.ConstraintViolationException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.TypeMismatchException;
 import org.springframework.context.MessageSource;
@@ -226,6 +227,20 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 
         HttpStatus status = HttpStatus.BAD_REQUEST;
         ProblemType problemType = ProblemType.BUSINESS_ERROR;
+        String detail = ex.getMessage();
+
+        Problem problem = createProblemBuilder(status, problemType, detail)
+                .userMessage(detail)
+                .build();
+
+        return handleExceptionInternal(ex, problem, new HttpHeaders(), status, request);
+    }
+
+    @ExceptionHandler(ConstraintViolationException.class)
+    public ResponseEntity<?> handleBusiness(ConstraintViolationException ex, WebRequest request) {
+
+        HttpStatus status = HttpStatus.BAD_REQUEST;
+        ProblemType problemType = ProblemType.INVALID_PARAMETER;
         String detail = ex.getMessage();
 
         Problem problem = createProblemBuilder(status, problemType, detail)

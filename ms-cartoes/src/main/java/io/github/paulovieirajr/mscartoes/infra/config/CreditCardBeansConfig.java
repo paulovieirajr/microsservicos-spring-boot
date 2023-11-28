@@ -1,13 +1,13 @@
 package io.github.paulovieirajr.mscartoes.infra.config;
 
-import io.github.paulovieirajr.mscartoes.core.application.repositories.CreditCardRepositoryGateway;
-import io.github.paulovieirajr.mscartoes.core.application.usecases.CreditCardFindByIncomeUseCase;
-import io.github.paulovieirajr.mscartoes.core.application.usecases.CreditCardFindByIncomeUseCaseHandler;
-import io.github.paulovieirajr.mscartoes.core.application.usecases.CreditCardRegisterUseCase;
-import io.github.paulovieirajr.mscartoes.core.application.usecases.CreditCardRegisterUseCaseHandler;
-import io.github.paulovieirajr.mscartoes.infra.gateways.CreditCardRepositoryGatewayJpa;
+import io.github.paulovieirajr.mscartoes.core.application.repositories.creditcard.CreditCardRepositoryGateway;
+import io.github.paulovieirajr.mscartoes.core.application.usecases.creditcard.find.CreditCardFindByIncomeUseCase;
+import io.github.paulovieirajr.mscartoes.core.application.usecases.creditcard.find.CreditCardFindByIncomeUseCaseHandler;
+import io.github.paulovieirajr.mscartoes.core.application.usecases.creditcard.save.CreditCardRegisterUseCase;
+import io.github.paulovieirajr.mscartoes.core.application.usecases.creditcard.save.CreditCardRegisterUseCaseHandler;
+import io.github.paulovieirajr.mscartoes.infra.gateways.creditcard.CreditCardRepositoryGatewayJpa;
 import io.github.paulovieirajr.mscartoes.infra.mapper.CreditCardMapper;
-import io.github.paulovieirajr.mscartoes.infra.repositories.CreditCardRepository;
+import io.github.paulovieirajr.mscartoes.infra.repositories.creditcard.CreditCardRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
