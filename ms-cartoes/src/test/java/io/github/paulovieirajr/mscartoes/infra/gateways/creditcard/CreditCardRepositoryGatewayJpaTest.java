@@ -1,4 +1,4 @@
-package io.github.paulovieirajr.mscartoes.infra.gateways;
+package io.github.paulovieirajr.mscartoes.infra.gateways.creditcard;
 
 import io.github.paulovieirajr.mscartoes.core.domain.CardNetwork;
 import io.github.paulovieirajr.mscartoes.core.domain.CreditCard;
