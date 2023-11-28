@@ -1,4 +1,4 @@
-package io.github.paulovieirajr.mscartoes.api.dto;
+package io.github.paulovieirajr.mscartoes.api.dto.creditcard;
 
 import io.github.paulovieirajr.mscartoes.core.domain.CardNetwork;
 import io.github.paulovieirajr.mscartoes.core.domain.CreditCard;

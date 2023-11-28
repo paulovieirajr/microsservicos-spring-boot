@@ -1,8 +1,8 @@
-package io.github.paulovieirajr.mscartoes.api.controller;
+package io.github.paulovieirajr.mscartoes.api.controller.creditcard;
 
-import io.github.paulovieirajr.mscartoes.api.dto.CreditCardResponse;
+import io.github.paulovieirajr.mscartoes.api.dto.creditcard.CreditCardResponse;
 import io.github.paulovieirajr.mscartoes.api.exception.BusinessException;
-import io.github.paulovieirajr.mscartoes.core.application.usecases.CreditCardFindByIncomeUseCase;
+import io.github.paulovieirajr.mscartoes.core.application.usecases.creditcard.find.CreditCardFindByIncomeUseCase;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

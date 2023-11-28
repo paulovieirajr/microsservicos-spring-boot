@@ -1,7 +1,7 @@
-package io.github.paulovieirajr.mscartoes.api.controller;
+package io.github.paulovieirajr.mscartoes.api.controller.creditcard;
 
-import io.github.paulovieirajr.mscartoes.api.dto.CreditCardRequest;
-import io.github.paulovieirajr.mscartoes.core.application.usecases.CreditCardRegisterUseCase;
+import io.github.paulovieirajr.mscartoes.api.dto.creditcard.CreditCardRequest;
+import io.github.paulovieirajr.mscartoes.core.application.usecases.creditcard.save.CreditCardRegisterUseCase;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

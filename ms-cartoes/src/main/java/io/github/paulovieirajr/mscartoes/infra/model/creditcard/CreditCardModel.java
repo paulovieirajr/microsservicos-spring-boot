@@ -1,4 +1,4 @@
-package io.github.paulovieirajr.mscartoes.infra.model;
+package io.github.paulovieirajr.mscartoes.infra.model.creditcard;
 
 import io.github.paulovieirajr.mscartoes.core.domain.CardNetwork;
 import jakarta.persistence.*;

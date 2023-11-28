@@ -1,7 +1,7 @@
-package io.github.paulovieirajr.mscartoes.core.application.repositories;
+package io.github.paulovieirajr.mscartoes.core.application.repositories.creditcard;
 
 import io.github.paulovieirajr.mscartoes.core.domain.CreditCard;
-import io.github.paulovieirajr.mscartoes.infra.model.CreditCardModel;
+import io.github.paulovieirajr.mscartoes.infra.model.creditcard.CreditCardModel;
 
 import java.util.Collection;
 

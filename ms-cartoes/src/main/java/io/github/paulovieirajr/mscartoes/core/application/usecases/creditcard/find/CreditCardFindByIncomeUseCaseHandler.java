@@ -1,7 +1,7 @@
-package io.github.paulovieirajr.mscartoes.core.application.usecases;
+package io.github.paulovieirajr.mscartoes.core.application.usecases.creditcard.find;
 
-import io.github.paulovieirajr.mscartoes.api.dto.CreditCardResponse;
-import io.github.paulovieirajr.mscartoes.core.application.repositories.CreditCardRepositoryGateway;
+import io.github.paulovieirajr.mscartoes.api.dto.creditcard.CreditCardResponse;
+import io.github.paulovieirajr.mscartoes.core.application.repositories.creditcard.CreditCardRepositoryGateway;
 
 import java.util.Collection;
 

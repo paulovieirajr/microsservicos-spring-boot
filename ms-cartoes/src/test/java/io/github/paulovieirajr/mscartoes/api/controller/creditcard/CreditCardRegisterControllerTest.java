@@ -1,8 +1,9 @@
-package io.github.paulovieirajr.mscartoes.api.controller;
+package io.github.paulovieirajr.mscartoes.api.controller.creditcard;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.github.paulovieirajr.mscartoes.api.dto.CreditCardRequest;
-import io.github.paulovieirajr.mscartoes.core.application.usecases.CreditCardRegisterUseCase;
+import io.github.paulovieirajr.mscartoes.api.controller.creditcard.CreditCardRegisterController;
+import io.github.paulovieirajr.mscartoes.api.dto.creditcard.CreditCardRequest;
+import io.github.paulovieirajr.mscartoes.core.application.usecases.creditcard.save.CreditCardRegisterUseCase;
 import io.github.paulovieirajr.mscartoes.core.domain.CardNetwork;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;

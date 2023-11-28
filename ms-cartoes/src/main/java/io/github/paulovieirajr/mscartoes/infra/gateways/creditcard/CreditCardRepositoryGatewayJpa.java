@@ -1,10 +1,10 @@
-package io.github.paulovieirajr.mscartoes.infra.gateways;
+package io.github.paulovieirajr.mscartoes.infra.gateways.creditcard;
 
-import io.github.paulovieirajr.mscartoes.core.application.repositories.CreditCardRepositoryGateway;
+import io.github.paulovieirajr.mscartoes.core.application.repositories.creditcard.CreditCardRepositoryGateway;
 import io.github.paulovieirajr.mscartoes.core.domain.CreditCard;
 import io.github.paulovieirajr.mscartoes.infra.mapper.CreditCardMapper;
-import io.github.paulovieirajr.mscartoes.infra.model.CreditCardModel;
-import io.github.paulovieirajr.mscartoes.infra.repositories.CreditCardRepository;
+import io.github.paulovieirajr.mscartoes.infra.model.creditcard.CreditCardModel;
+import io.github.paulovieirajr.mscartoes.infra.repositories.creditcard.CreditCardRepository;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;

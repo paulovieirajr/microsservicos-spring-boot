@@ -1,7 +1,7 @@
-package io.github.paulovieirajr.mscartoes.api.dto;
+package io.github.paulovieirajr.mscartoes.api.dto.creditcard;
 
 import io.github.paulovieirajr.mscartoes.core.domain.CardNetwork;
-import io.github.paulovieirajr.mscartoes.infra.model.CreditCardModel;
+import io.github.paulovieirajr.mscartoes.infra.model.creditcard.CreditCardModel;
 
 import java.math.BigDecimal;
 import java.util.Collection;

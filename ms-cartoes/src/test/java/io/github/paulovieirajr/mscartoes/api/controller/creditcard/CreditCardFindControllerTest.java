@@ -1,6 +1,7 @@
-package io.github.paulovieirajr.mscartoes.api.controller;
+package io.github.paulovieirajr.mscartoes.api.controller.creditcard;
 
-import io.github.paulovieirajr.mscartoes.core.application.usecases.CreditCardFindByIncomeUseCase;
+import io.github.paulovieirajr.mscartoes.api.controller.creditcard.CreditCardFindController;
+import io.github.paulovieirajr.mscartoes.core.application.usecases.creditcard.find.CreditCardFindByIncomeUseCase;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

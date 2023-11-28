@@ -1,6 +1,6 @@
-package io.github.paulovieirajr.mscartoes.infra.repositories;
+package io.github.paulovieirajr.mscartoes.infra.repositories.creditcard;
 
-import io.github.paulovieirajr.mscartoes.infra.model.CreditCardModel;
+import io.github.paulovieirajr.mscartoes.infra.model.creditcard.CreditCardModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

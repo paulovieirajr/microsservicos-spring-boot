@@ -1,8 +1,8 @@
-package io.github.paulovieirajr.mscartoes.core.application.usecases;
+package io.github.paulovieirajr.mscartoes.core.application.usecases.creditcard.save;
 
-import io.github.paulovieirajr.mscartoes.api.dto.CreditCardRequest;
-import io.github.paulovieirajr.mscartoes.api.dto.CreditCardResponse;
-import io.github.paulovieirajr.mscartoes.core.application.repositories.CreditCardRepositoryGateway;
+import io.github.paulovieirajr.mscartoes.api.dto.creditcard.CreditCardRequest;
+import io.github.paulovieirajr.mscartoes.api.dto.creditcard.CreditCardResponse;
+import io.github.paulovieirajr.mscartoes.core.application.repositories.creditcard.CreditCardRepositoryGateway;
 
 public class CreditCardRegisterUseCaseHandler implements CreditCardRegisterUseCase {
 

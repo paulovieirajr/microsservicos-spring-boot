@@ -2,9 +2,10 @@ package io.github.paulovieirajr.mscartoes.infra.gateways;
 
 import io.github.paulovieirajr.mscartoes.core.domain.CardNetwork;
 import io.github.paulovieirajr.mscartoes.core.domain.CreditCard;
+import io.github.paulovieirajr.mscartoes.infra.gateways.creditcard.CreditCardRepositoryGatewayJpa;
 import io.github.paulovieirajr.mscartoes.infra.mapper.CreditCardMapper;
-import io.github.paulovieirajr.mscartoes.infra.model.CreditCardModel;
-import io.github.paulovieirajr.mscartoes.infra.repositories.CreditCardRepository;
+import io.github.paulovieirajr.mscartoes.infra.model.creditcard.CreditCardModel;
+import io.github.paulovieirajr.mscartoes.infra.repositories.creditcard.CreditCardRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
