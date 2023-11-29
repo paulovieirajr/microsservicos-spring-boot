@@ -15,6 +15,14 @@ eureka:
     hostname: localhost
     ipAddr: 127.0.0.1
 
+feign:
+  client:
+    name: ms-clientes
+    path: /api/v1/clients
+  credit-card:
+    name: ms-cartoes
+    path: /api/v1/credit-cards-client
+
 management:
   endpoints:
     web:
