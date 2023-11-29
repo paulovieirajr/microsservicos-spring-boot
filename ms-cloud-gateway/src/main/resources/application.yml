@@ -18,6 +18,10 @@ spring:
           uri: lb://ms-cartoes
           predicates:
             - Path=/api/v1/credit-cards/**
+        - id: ms-avaliador-credito
+          uri: lb://ms-avaliador-credito
+          predicates:
+            - Path=/api/v1/credit-appraiser/**
 
 server:
   port: 8080
