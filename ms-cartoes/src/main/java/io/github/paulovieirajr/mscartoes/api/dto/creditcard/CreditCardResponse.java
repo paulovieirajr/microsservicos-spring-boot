@@ -9,7 +9,7 @@ import java.util.Collection;
 public record CreditCardResponse(
         String name,
         CardNetwork cardNetwork,
-        BigDecimal limit
+        BigDecimal creditLimit
 ) {
     public static Collection<CreditCardResponse> fromCollection(Collection<CreditCardModel> creditCards) {
         return creditCards.stream()

@@ -14,11 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Collection;
 
 import static io.github.paulovieirajr.mscartoes.api.constants.ApiDetailsConstants.API_VERSION;
-import static io.github.paulovieirajr.mscartoes.api.constants.CreditCardControllerConstants.CREDIT_CARDS_CLIENT;
+import static io.github.paulovieirajr.mscartoes.api.constants.CreditCardControllerConstants.CLIENT;
+import static io.github.paulovieirajr.mscartoes.api.constants.CreditCardControllerConstants.CREDIT_CARDS;
 
 @RestController
 @Validated
-@RequestMapping(API_VERSION + CREDIT_CARDS_CLIENT)
+@RequestMapping(API_VERSION + CREDIT_CARDS)
 @Slf4j
 public class CreditCardClientFindController {
 
@@ -28,7 +29,7 @@ public class CreditCardClientFindController {
         this.creditCardClientFindByCpfUseCase = creditCardClientFindByCpfUseCase;
     }
 
-    @GetMapping
+    @GetMapping(CLIENT)
     public ResponseEntity<Collection<CreditCardClientResponse>> findByCpf(
             @RequestParam @CPF(message = "O CPF fornecido é inválido") String cpf) {
         log.info("Endpoint called: GET /credit-cards/{}", cpf);

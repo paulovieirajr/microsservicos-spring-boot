@@ -46,7 +46,7 @@ class CreditCardTest {
     }
 
     @Test
-    @DisplayName("Should return correct limit")
+    @DisplayName("Should return correct creditLimit")
     void shouldReturnCorrectLimit() {
         CreditCard creditCard = new CreditCard("Test Card", CardNetwork.VISA, new BigDecimal("2000"), new BigDecimal("5000"));
         assertEquals(new BigDecimal("5000"), creditCard.getLimit());
