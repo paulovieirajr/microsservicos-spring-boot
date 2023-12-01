@@ -9,9 +9,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Collection;
 
-@FeignClient(value = "${feign.credit-card.name}", path = "${feign.credit-card.path}")
+@FeignClient(value = "${feign.credit-cards.name}", path = "${feign.credit-cards.path}")
 public interface CreditCardResourceClient {
 
     @GetMapping
-    ResponseEntity<Collection<CreditCardClient>> execute(@RequestParam String cpf);
+    ResponseEntity<Collection<CreditCardClient>> findByIncome(@RequestParam Long income);
+
+    @GetMapping("/client")
+    ResponseEntity<Collection<CreditCardClient>> getCreditCardsByCpf(@RequestParam String cpf);
+
 }

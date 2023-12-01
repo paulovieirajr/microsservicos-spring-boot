@@ -17,7 +17,7 @@ public class GetCreditCardByCpf implements GetCreditCardByCpfGateway {
 
     @Override
     public Collection<CreditCardClient> execute(String cpf) {
-        ResponseEntity<Collection<CreditCardClient>> creditCardResponse = creditCardResourceClient.execute(cpf);
+        ResponseEntity<Collection<CreditCardClient>> creditCardResponse = creditCardResourceClient.getCreditCardsByCpf(cpf);
         return creditCardResponse.getBody();
     }
 }

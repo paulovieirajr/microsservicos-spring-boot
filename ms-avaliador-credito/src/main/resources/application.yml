@@ -19,9 +19,10 @@ feign:
   client:
     name: ms-clientes
     path: /api/v1/clients
-  credit-card:
+  credit-cards:
     name: ms-cartoes
-    path: /api/v1/credit-cards-client
+    path: /api/v1/credit-cards
+    client: client
 
 management:
   endpoints:
