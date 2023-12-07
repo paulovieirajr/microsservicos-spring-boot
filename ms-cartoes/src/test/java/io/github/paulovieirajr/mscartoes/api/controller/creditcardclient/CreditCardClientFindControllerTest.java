@@ -15,7 +15,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 @WebMvcTest(CreditCardClientFindController.class)
 class CreditCardClientFindControllerTest {
 
-    public static final String URI_API = "/api/v1/credit-cards-client";
+    public static final String URI_API = "/api/v1/credit-cards/client";
     public static final String FAKE_VALID_CPF = "02522228064";
 
     @Autowired
