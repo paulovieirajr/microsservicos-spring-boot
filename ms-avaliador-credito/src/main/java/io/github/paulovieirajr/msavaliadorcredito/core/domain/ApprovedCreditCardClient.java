@@ -4,6 +4,9 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Collection;
 import java.util.List;
+import java.util.Objects;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class ApprovedCreditCardClient {
 
@@ -27,14 +30,14 @@ public class ApprovedCreditCardClient {
         return creditLimit.multiply(BigDecimal.valueOf(1.35)).setScale(2, RoundingMode.HALF_UP);
     }
 
-    public static List<ApprovedCreditCardClient> mapToApprovedCreditCards(Collection<CreditCardClient> creditCardClients, ClientData clientData) {
+    public static Set<ApprovedCreditCardClient> mapToApprovedCreditCards(Collection<CreditCardClient> creditCardClients, ClientData clientData) {
         return creditCardClients.stream()
                 .map(creditCardClient -> new ApprovedCreditCardClient(
                         creditCardClient.name(),
                         creditCardClient.cardNetwork(),
                         creditCardClient.creditLimit(),
                         clientData.age()))
-                .toList();
+                .collect(Collectors.toSet());
     }
 
     public String getName() {
@@ -47,5 +50,18 @@ public class ApprovedCreditCardClient {
 
     public BigDecimal getCreditLimit() {
         return creditLimit;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ApprovedCreditCardClient that = (ApprovedCreditCardClient) o;
+        return Objects.equals(name, that.name) && cardNetwork == that.cardNetwork && Objects.equals(creditLimit, that.creditLimit);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, cardNetwork, creditLimit);
     }
 }

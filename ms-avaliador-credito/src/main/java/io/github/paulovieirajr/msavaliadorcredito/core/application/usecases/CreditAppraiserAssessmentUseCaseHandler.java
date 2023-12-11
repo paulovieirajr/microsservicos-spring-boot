@@ -9,7 +9,6 @@ import io.github.paulovieirajr.msavaliadorcredito.core.domain.ClientData;
 import io.github.paulovieirajr.msavaliadorcredito.core.domain.CreditCardClient;
 
 import java.util.Collection;
-import java.util.List;
 
 public class CreditAppraiserAssessmentUseCaseHandler implements CreditAppraiserAssessmentUseCase{
 
